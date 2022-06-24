@@ -32,7 +32,7 @@ server {
 }
 ~~~
 #### <ins> *Note*</ins>  : <br>
-> where there are more than 1 backendapplication server, just add the application server ip's in the upstream as below, <br>
+> where there are more than 1 backend application server, just add the application server ip's in the upstream as below, <br>
 > upstream backend { <br>
 > &nbsp; &nbsp;  &nbsp;  server 192.168.24.35:8080; <br>
 > &nbsp; &nbsp;  &nbsp;  server 192.168.24.24:8080; <br>
