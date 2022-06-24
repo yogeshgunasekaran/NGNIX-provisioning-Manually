@@ -37,7 +37,7 @@ rm -rf /etc/nginx/sites-enabled/default
 ```
 ### Create link to activate website
 ```sh
-ln -s /etc/nginx/sites-available/<project file> /etc/nginx/sites-enabled/<project file>
+ln -s /etc/nginx/sites-available/<project name> /etc/nginx/sites-enabled/<project name>
 ```
 ### Restart Nginx
 ```sh
