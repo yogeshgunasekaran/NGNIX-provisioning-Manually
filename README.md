@@ -15,7 +15,7 @@ apt upgrade
 ```sh
 apt install nginx -y
 ```
-### Create Nginx conf file with below content
+### Create Nginx config file with below content
 ```sh
 vi /etc/nginx/sites-available/<enter project name here>
 ```
@@ -31,7 +31,7 @@ proxy_pass http://vproapp;
 }
 
 ~~~
-### Remove default nginx conf
+### Remove default Nginx config file
 ```sh
 rm -rf /etc/nginx/sites-enabled/default
 ```
