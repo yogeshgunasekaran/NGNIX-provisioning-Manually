@@ -20,13 +20,13 @@ apt install nginx -y
 vi /etc/nginx/sites-available/<enter project name here>
 ```
 ~~~
-upstream vproapp {
-server app01:8080;
+upstream <project name> {
+server <tomcat server ip>:8080;
 }
 server {
 listen 80;
 location / {
-proxy_pass http://vproapp;
+proxy_pass http://<project name>;
 }
 }
 
