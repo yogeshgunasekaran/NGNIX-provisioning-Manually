@@ -1,5 +1,5 @@
 # NGNIX-provisioning-Manually
-Installation of NGNIX in Ubuntu
+Installation of NGNIX in Ubuntu. Nginx is a front-end web server, used as a reverse proxy server which receives the request from client and send the request to proxy servers (application server).
 ### Log in to root user
 ```sh
 sudo su -
@@ -29,8 +29,24 @@ location / {
 proxy_pass http://<project name>;
 }
 }
-
 ~~~
+#### <ins> *Note*</ins>  : <br>
+> where there are more than 1 application server, just add the application servers ip's in the upstream as below, <br>
+> upstream ngnixproj { <br>
+> server 192.168.24.35:8080; <br>
+> server 192.168.24.24:8080; <br>
+> server 192.168.24.78:8080; <br>
+> server 192.168.24.13:8080; <br>
+> } <br>
+> server { <br>
+> listen 80; <br>
+> location / { <br>
+> proxy_pass http://ngnixproj; <br>
+> } <br>
+> } <br>
+
+
+
 ### Remove default Nginx config file
 ```sh
 rm -rf /etc/nginx/sites-enabled/default
