@@ -22,28 +22,28 @@ vi /etc/nginx/sites-available/<enter 'project name' here>
 ```
 ~~~
 upstream <project name> {
-server <tomcat server ip>:8080;
+  server <tomcat server ip>:8080;
 }
 server {
-listen 80;
-location / {
-proxy_pass http://<project name>;
-}
+  listen 80;
+  location / {
+    proxy_pass http://<project name>;
+  }
 }
 ~~~
 #### <ins> *Note*</ins>  : <br>
-> where there are more than 1 application server, just add the application server ip's in the upstream as below, <br>
-> upstream ngnixproj { <br>
-> server 192.168.24.35:8080; <br>
-> server 192.168.24.24:8080; <br>
-> server 192.168.24.78:8080; <br>
-> server 192.168.24.13:8080; <br>
+> where there are more than 1 backendapplication server, just add the application server ip's in the upstream as below, <br>
+> upstream backend { <br>
+> &nbsp; &nbsp;  &nbsp;  server 192.168.24.35:8080; <br>
+> &nbsp; &nbsp;  &nbsp;  server 192.168.24.24:8080; <br>
+> &nbsp; &nbsp;  &nbsp;  server 192.168.24.78:8080; <br>
+> &nbsp; &nbsp;  &nbsp;  server 192.168.24.13:8080; <br>
 > } <br>
 > server { <br>
-> listen 80; <br>
-> location / { <br>
-> proxy_pass http://ngnixproj; <br>
-> } <br>
+> &nbsp; &nbsp;  &nbsp;  listen 80; <br>
+> &nbsp; &nbsp;  &nbsp;  location / { <br>
+> &nbsp; &nbsp; &nbsp;  &nbsp;    proxy_pass http://backend; <br>
+> &nbsp; &nbsp;   &nbsp;  } <br>
 > } <br>
 
 
