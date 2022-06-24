@@ -35,7 +35,7 @@ server {
 > The above file configuration will let the Ngnix to listen the requests from client in port 80 and re-direct those requests to the tomcat servers at the backend in port 8080.
 > 
 #### <ins> *Note*</ins>  : <br>
-> where there are more than 1 backend application server, just add the application server ip's in the upstream as below, <br>
+> when there are more than 1 backend application server, just add the application server ip's in the upstream as below, <br>
 > upstream backend { <br>
 > &nbsp; &nbsp;  &nbsp;  server 192.168.24.35:8080; <br>
 > &nbsp; &nbsp;  &nbsp;  server 192.168.24.24:8080; <br>
