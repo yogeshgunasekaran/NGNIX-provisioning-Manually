@@ -17,7 +17,7 @@ apt install nginx -y
 ```
 ### Create Nginx config file with below content
 ```sh
-vi /etc/nginx/sites-available/<enter project name here>
+vi /etc/nginx/sites-available/<enter 'project name' here>
 ```
 ~~~
 upstream <project name> {
