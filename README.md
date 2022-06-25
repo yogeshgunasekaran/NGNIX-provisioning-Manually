@@ -55,7 +55,7 @@ server {
 ```sh
 rm -rf /etc/nginx/sites-enabled/default
 ```
-### Create link to activate website
+### Create Symbolic link to activate website
 ```sh
 ln -s /etc/nginx/sites-available/<project name> /etc/nginx/sites-enabled/<project name>
 ```
